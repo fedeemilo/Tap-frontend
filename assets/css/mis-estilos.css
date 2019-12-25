@@ -2012,18 +2012,6 @@ section.lazy-placeholder:after {
 	}
 
 	/* Toggle Switch - fin */
-
-	/* Tiendas - inicio */
-	.cont-stores {
-	}
-
-	.stores {
-		/* position: relative !important;
-    left: 1rem !important;
-    width: 150px !important; */
-	}
-
-	/* Tiendas - fin */
 }
 
 @media screen and (max-width: 394px) {
