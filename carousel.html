@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel Phone Animation</title>
+    <link rel="stylesheet" href="./assets/css/phone-carousel.css">
+</head>
+<body>
+    <div id="slider-wrap">
+        <div id="slider">
+          <ul>
+            <li>SLIDE 1</li>
+            <li style="background: #aaa;">SLIDE 2</li>
+            <li>SLIDE 3</li>
+            <li style="background: #aaa;">SLIDE 4</li>
+          </ul>  
+        </div>
+        <div class="next-wrap">
+            <a href="#" class="control_next">
+                <img src="./assets/images/chevron-right.svg" alt="" class="derecha">
+            </a>
+        </div>
+        <div class="prev-wrap">
+            <a href="#" class="control_prev">
+                <img src="./assets/images/chevron-left.svg" alt="" class="izquierda">
+            </a>
+        </div>
+    </div>
+    <div class="slider_option">
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox">Autoplay Slider</label>
+    </div> 
+    
+    
+    <!-- SCRIPTS -->
+    <script src="./assets/web/assets/jquery/jquery.min.js"></script>
+    <script>
+          jQuery(document).ready(function ($) {
+
+          $('#checkbox').change(function(){
+            setInterval(function () {
+                moveRight();
+            }, 3000);
+          });
+
+            var slideCount = $('#slider ul li').length;
+            var slideWidth = $('#slider ul li').width();
+            var slideHeight = $('#slider ul li').height();
+            var sliderUlWidth = slideCount * slideWidth;
+
+            $('#slider').css({ width: slideWidth, height: slideHeight });
+
+            $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+            $('#slider ul li:last-child').prependTo('#slider ul');
+
+            function moveLeft() {
+                $('#slider ul').animate({
+                    left: + slideWidth
+                }, 200, function () {
+                    $('#slider ul li:last-child').prependTo('#slider ul');
+                    $('#slider ul').css('left', '');
+                });
+            };
+
+            function moveRight() {
+                $('#slider ul').animate({
+                    left: - slideWidth
+                }, 200, function () {
+                    $('#slider ul li:first-child').appendTo('#slider ul');
+                    $('#slider ul').css('left', '');
+                });
+            };
+
+            $('a.control_prev').click(function () {
+                moveLeft();
+            });
+
+            $('a.control_next').click(function () {
+                moveRight();
+            });
+
+        });    
+
+    </script>
+</body>
+</html>
