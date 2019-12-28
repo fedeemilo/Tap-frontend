@@ -1459,10 +1459,12 @@ section.lazy-placeholder:after {
 }
 .cid-rJHRjRTYxI h1 {
 	color: #232323;
+	/* margin: 0 auto !important; */
 }
 .cid-rJHRjRTYxI .mbr-text,
 .cid-rJHRjRTYxI .mbr-section-btn {
 	color: #232323;
+	margin:;
 }
 .cid-rJHS95kP24 {
 	padding-top: 90px;
