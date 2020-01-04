@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Phone Carousel Slider</title>
+		<link rel="stylesheet" href="main-carousel.css" />
+	</head>
+	<body>
+		<div class="item" id="slider-wrap">
+			<div id="outside">
+				<!-- prev/next links -->
+				<div class="center">
+					<span id="prev" style="position: relative; left: -5rem; top: 16.1rem"
+						><img id="derecha1" src="./assets/images/chevron-left.svg" alt="" class="control"
+					/></span>
+				</div>
+				<!-- slideshow -->
+				<div
+					class="cycle-slideshow"
+					data-cycle-fx="fade"
+					data-cycle-timeout="0"
+					data-cycle-prev="#prev"
+					data-cycle-next="#next"
+				>
+					<img
+						class="slider-content"
+						src="http://malsup.github.io/images/p2.jpg"
+					/>
+					<img
+						class="slider-content"
+						src="http://malsup.github.io/images/p3.jpg"
+					/>
+					<img
+						class="slider-content"
+						src="http://malsup.github.io/images/p4.jpg"
+					/>
+                </div>
+                <div class="center">
+                    <span id="next" style="position: relative; right: -20.5rem; bottom: 17.5rem"><img src="./assets/images/chevron-right.svg" alt="" class="control"/></span>
+                </div>
+			</div>
+		</div>
+
+		<script src="./assets/web/assets/jquery/jquery.min.js"></script>
+		<script src="./assets/js/cycle.js"></script>
+		<!-- <script>
+			$(document).ready(function($) {
+				var wrapSlider1 = $('#slider-wrap');
+				var slideCount = $('#slider ul li').length;
+				var slideCount2 = $('#slider2 ul li').length;
+				var slideWidth = $('#slider ul li').width();
+				var slideWidth2 = $('#slider2 ul li').width();
+				var slideHeight = $('#slider ul li').height();
+				var slideHeight2 = $('#slider2 ul li').height();
+				var sliderUlWidth = slideCount * slideWidth;
+
+				var slider2UlWidth = slideCount2 * slideWidth2;
+
+				$('#slider').css({ width: slideWidth, height: slideHeight });
+				$('#slider2').css({ width: slideWidth2, height: slideHeight2 });
+
+				$('#slider ul').css({
+					width: sliderUlWidth,
+					marginLeft: -slideWidth
+				});
+
+				$('#slider2 ul').css({
+					width: slider2UlWidth,
+					marginLeft: -slideWidth2
+				});
+
+				// $('#slider ul li:last-child, #slider2 ul li:last-child').prependTo(
+				// 	'#slider ul, #slider2 ul'
+				// );
+
+				function moveLeft() {
+					$('#slider ul').animate(
+						{
+							left: +slideWidth
+						},
+						200,
+						function() {
+							$('#slider ul li:last-child').prependTo('#slider ul');
+							$('#slider ul').css('left', '');
+						}
+					);
+				}
+
+				function moveLeft2() {
+					$('#slider2 ul').animate(
+						{
+							left: +slideWidth2
+						},
+						200,
+						function() {
+							$('#slider2 ul li:last-child').prependTo('#slider2 ul');
+							$('#slider2 ul').css('left', '');
+						}
+					);
+				}
+
+				function moveRight() {
+					$('#slider ul').animate(
+						{
+							left: -slideWidth
+						},
+						200,
+						function() {
+							$('#slider ul li:first-child').appendTo('#slider ul');
+							$('#slider ul').css('left', '');
+						}
+					);
+				}
+
+				function moveRight2() {
+					$('#slider2 ul').animate(
+						{
+							left: -slideWidth2
+						},
+						200,
+						function() {
+							$('#slider2 ul li:first-child').appendTo('#slider2 ul');
+							$('#slider2 ul').css('left', '');
+						}
+					);
+				}
+
+				$('a.control_prev').click(function() {
+					moveLeft();
+				});
+
+				$('a.control_prev2').click(function() {
+					moveLeft2();
+				});
+
+				$('a.control_next').click(function() {
+					moveRight();
+				});
+
+				$('a.control_next2').click(function() {
+					moveRight2();
+				});
+			});
+		</script> -->
+	</body>
+</html>

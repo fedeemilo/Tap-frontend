@@ -48,6 +48,14 @@ body::-webkit-scrollbar-thumb {
 }
 /* Estilos Scrollbar  - fin */
 
+.cycle-slideshow {
+	position: relative;
+	/* top: 0.7rem; */
+	/* border: 17px solid var(--color-headings); */
+	/* border-radius: 15px;
+	margin: 5px; */
+}
+
 /* header - inicio */
 
 .stores {
@@ -159,6 +167,12 @@ hr.solid {
 
 .texto-azul {
 	color: #002350 !important;
+}
+
+
+.center:hover {
+	cursor: pointer;
+	opacity: 1 !important;
 }
 
 /* Toggle Switch */
@@ -518,8 +532,8 @@ html.transition *:after {
 .btn-secondary-outline,
 .btn-secondary-outline:active {
 	background: none;
-	border-color: var(--color-headings);
-	color: var(--color-headings);
+	border-color: var(--color-headings) !important;
+	color: var(--color-headings) !important;
 }
 .btn-secondary-outline:hover,
 .btn-secondary-outline:focus,
@@ -1464,7 +1478,7 @@ section.lazy-placeholder:after {
 .cid-rJHRjRTYxI .mbr-text,
 .cid-rJHRjRTYxI .mbr-section-btn {
 	color: #232323;
-	margin:;
+	margin: ;
 }
 .cid-rJHS95kP24 {
 	padding-top: 90px;
